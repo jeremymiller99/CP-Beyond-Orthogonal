@@ -18,7 +18,8 @@ class Movement extends Phaser.Scene {
         this.cameras.main.setBackgroundColor('#87CEEB');
 
         this.player = this.physics.add.sprite(width / 2, height / 2, 'player');
-
+        this.player.setCollideWorldBounds(true);
+        
         this.anims.create({
             key: 'walk_down',
             frames: this.anims.generateFrameNumbers('player', { start: 0, end: 2 }),
